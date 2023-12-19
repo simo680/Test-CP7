@@ -63,7 +63,7 @@ async def insert_data():
 @pytest.mark.asyncio
 async def test_database_insert(event_loop):
     await insert_data()
-    conn = sqlite3.connect('my_database.db')
+    conn = sqlite3.connect('DB.db')
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM tablePeople WHERE name='Jade' AND age=23")
     result = cursor.fetchone()
