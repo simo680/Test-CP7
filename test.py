@@ -52,7 +52,7 @@ async def test_http_request(event_loop):
 
 
 async def insert_data():
-    conn = sqlite3.connect('my_database.db')
+    conn = sqlite3.connect('DB.db')
     cursor = conn.cursor()
     cursor.execute("CREATE TABLE IF NOT EXISTS tablePeople (name TEXT, age INT)")
     cursor.execute("INSERT INTO tablePeople (name, age) VALUES ('Jade', 23)")
